@@ -7,14 +7,16 @@ This document outlines the target features and output for each major version of 
 
 **Target Output:**
 - Complete user authentication system with role-based access (Pastor, Elder, Treasurer, Member, Youth)
+- User profile management with multiple role supp ort
 - Church directory for all Nueva Vizcaya SDA churches
 - Events calendar with full CRUD operations
-- Blogs and announcements section with SDA Fundamental Beliefs tagging
+- Dynamic home page with featured posts and upcoming events
+- Blogs and announcements section with SDA Fundamental Beliefs tagging, author info, verification status, and tags
 - Lesson Studies hub with SDA quarterly materials
 - File upload/download system for PowerPoints and resources
 - Responsive, polished UI/UX (mobile-first design)
-- Basic admin dashboard
-- User profiles and member management
+- Basic admin dashboard with role verification (Pastor roles require admin approval)
+- Member management with church membership changes
 
 **Tech Stack:** React (frontend), FastAPI (backend), PostgreSQL on EC2, AWS S3 for file storage
 
