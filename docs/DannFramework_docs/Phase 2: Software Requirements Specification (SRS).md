@@ -10,11 +10,14 @@
 
 **Answers**
 
-* **User Registration:** The system shall allow users to register using email and password. Triggered by user clicking "Register" button. Output: User account created, confirmation email sent.
-* **User Login:** The system shall allow registered users to log in using email and password. Triggered by user clicking "Login" button. Output: User authenticated, access granted to dashboard.
+* **Anonymous Content Access:** The system shall allow anonymous users to view public content including church directory, blogs, announcements, events, and lesson studies without registration. Triggered by visiting website. Output: Public content displayed.
+* **Optional Authentication:** The system shall prompt users to log in when accessing restricted features like file uploads, profile management, or content creation. Triggered by clicking restricted actions. Output: Login modal or redirect to login page.
+* **User Registration with Approval:** The system shall allow users to register using Google account and select an approving pastor/admin during signup. Triggered by user clicking "Register" button. Output: Registration request sent to selected approver.
+* **Approver Search:** The system shall provide search functionality for users to find pastors and admins by name during registration. For pastor role applications, only admins shall be searchable as approvers. Triggered by user typing in search field. Output: Filtered list of eligible approvers based on intended role.
+* **Account Approval Workflow:** The system shall allow selected pastors/admins to approve or reject registration requests. Triggered by approver reviewing pending requests. Output: User account activated or rejected with notification.
+* **User Login:** The system shall allow approved users to log in using Google account. Triggered by approved user clicking "Login" button or prompted by restricted actions. Output: User authenticated, access granted to requested feature.
 * **User Profile Management:** The system shall allow users to view and edit their profiles, including personal information, roles, and church membership. Triggered by user accessing profile page. Output: Profile updated, changes reflected across system.
-* **Role Management:** The system shall allow members to request role changes (youth, health, treasurer) and church membership changes. Triggered by user submitting role/membership change request. Output: Request submitted for approval, notifications sent.
-* **Pastor Role Verification:** The system shall require admin verification for pastor role applications. Triggered by user applying for pastor role. Output: Application submitted to admins, approval/denial notification sent.
+* **Role Management:** The system shall allow approved members to request role changes (youth, health, treasurer) and church membership changes. Triggered by user submitting role/membership change request. Output: Request submitted for approval, notifications sent.
 * **Multiple Roles Support:** The system shall support multiple roles per user account. Triggered by role assignments/approvals. Output: User permissions updated based on all assigned roles.
 * **Division Management:** The system shall support province divisions (Northern, Upper, South Eastern, etc.) with designated pastors. Triggered by admin division setup. Output: Division structure with assigned pastors.
 * **Church Directory:** The system shall display a directory of all SDA churches in Nueva Vizcaya organized by divisions. Triggered by user navigating to directory page. Output: Hierarchical list of divisions and churches with contact information.
@@ -94,10 +97,11 @@
 
 **Answers**
 
-* **User Registration:** Successful when new user can log in and access dashboard.
+* **User Registration with Approval:** Successful when user selects approver during signup and registration request is sent.
+* **Approver Search:** Successful when typing pastor/admin name returns filtered results.
+* **Account Approval Workflow:** Successful when selected approver can approve/reject registration requests with notifications.
 * **User Profile Management:** Successful when users can view and edit their profiles, changes persist across sessions.
 * **Role Management:** Successful when members can request role changes and admins approve/reject them appropriately.
-* **Pastor Role Verification:** Successful when pastor applications require admin approval and notifications are sent.
 * **Multiple Roles Support:** Successful when users with multiple roles have appropriate permissions across all roles.
 * **Division Management:** Successful when divisions are properly structured with designated pastors and churches are organized hierarchically.
 * **Home Page Content:** Successful when featured posts and upcoming events are displayed dynamically on page load.

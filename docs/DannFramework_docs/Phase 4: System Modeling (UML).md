@@ -9,7 +9,8 @@ System Context Diagram (Input, Process, Output arrows and System at the center)
 
 ```mermaid
 graph TD
-    A[SDA Members<br/>Youth, Members, Elders] --> S[Nueva Vizcaya SDA<br/>Website System]
+    AN[Anonymous Visitors] --> S[Nueva Vizcaya SDA<br/>Website System]
+    A[SDA Members<br/>Youth, Members, Elders] --> S
     B[SDA Pastors<br/>Division/Church Pastors] --> S
     C[Church Treasurers<br/>Financial Roles] --> S
     D[SDA Admins<br/>System Admins] --> S
@@ -17,16 +18,18 @@ graph TD
     S --> E[AWS Services<br/>Cognito, S3, RDS, EC2]
     S --> F[External SDA Resources<br/>Lesson Materials]
 
-    A --> G[Registration, Login<br/>Profile Management<br/>Event Participation<br/>Content Viewing]
-    B --> H[Same as Members<br/>+ Church Leadership]
-    C --> I[Financial Reporting<br/>Member Management]
-    D --> J[Content Management<br/>User Administration<br/>Role Verification]
-    E --> K[Authentication<br/>File Storage<br/>Database Operations]
-    F --> L[Lesson Materials<br/>Integration]
+    AN --> G[Public Content Viewing<br/>Church Directory<br/>Events, Blogs, Lessons]
+    A --> H[Registration, Login<br/>Profile Management<br/>Event Participation<br/>Content Creation]
+    B --> I[Same as Members<br/>+ Church Leadership]
+    C --> J[Financial Reporting<br/>Member Management]
+    D --> K[Content Management<br/>User Administration<br/>Role Verification]
+    E --> L[Authentication<br/>File Storage<br/>Database Operations]
+    F --> M[Lesson Materials<br/>Integration]
 ```
 
 **Key Interactions:**
-- **SDA Members & Pastors** → System: Registration, login, profile management, event participation, content viewing
+- **Anonymous Visitors** → System: Public content viewing (church directory, events, blogs, lesson studies) without registration
+- **SDA Members & Pastors** → System: Registration, login, profile management, event participation, content creation
 - **Church Treasurers** → System: Financial reporting, member management
 - **SDA Admins** → System: Content management, user administration, role verification
 - **System** → AWS Services: Authentication, file storage, database operations
@@ -37,25 +40,38 @@ graph TD
 Sequence Diagram
 **Question:** What happens step-by-step?
 
-**User Registration & Profile Setup Sequence:**
+**User Registration & Approval Sequence:**
 
 ```mermaid
 sequenceDiagram
     participant U as SDA Member
     participant W as Website
-    participant C as AWS Cognito
     participant D as Database
+    participant Ap as Approver
 
-    U->>W: Click "Register"
-    W->>C: Create user account
-    C->>W: Return user credentials
-    W->>D: Store user profile
-    D->>W: Confirm storage
-    W->>U: Display profile setup form
-    U->>W: Submit profile & church selection
-    W->>D: Update user with division/church
+    U->>W: Click "Register with Google"
+    W->>U: Redirect to Google OAuth
+    U->>W: Return with Google profile
+    W->>U: Show approver search form
+    U->>W: Type approver name (pastor/admin based on intended role)
+    W->>D: Search users by name, filtered by eligible roles for intended user role
+    D->>W: Return matching approvers
+    W->>U: Display filtered approver list
+    U->>W: Select approver
+    W->>D: Create user with pending status
+    D->>W: Return user ID
+    W->>Ap: Send approval notification
+    Ap->>W: Review pending requests
+    W->>D: Get pending approvals for approver
+    D->>W: Return approval requests
+    Ap->>W: Approve/Reject request
+    W->>D: Update user approval status
     D->>W: Confirm update
-    W->>U: Show success & redirect to dashboard
+    W->>U: Send approval/rejection notification
+    U->>W: Login with Google (if approved)
+    W->>D: Verify approval status
+    D->>W: Return user data
+    W->>U: Grant access to full features
 ```
 
 **Event Creation & Notification Sequence:**
@@ -79,6 +95,31 @@ sequenceDiagram
     D->>N: Return user list
     N->>U: Send event notifications
     U->>N: Acknowledge (optional)
+```
+
+**Anonymous Content Access & Optional Authentication Sequence:**
+
+```mermaid
+sequenceDiagram
+    participant V as Anonymous Visitor
+    participant W as Website
+    participant D as Database
+
+    V->>W: Visit website
+    W->>D: Fetch public content (events, posts, churches)
+    D->>W: Return public data
+    W->>V: Display public content
+
+    V->>W: Click "Upload File" (restricted action)
+    W->>V: Show login prompt/modal
+    V->>W: Click "Login"
+    W->>V: Redirect to login page
+    V->>W: Enter credentials
+    W->>D: Verify user authentication
+    D->>W: Return user data and permissions
+    W->>V: Grant access to upload feature
+
+    Note over V,W: User can now access restricted features
 ```
 
 **Role Application & Verification Sequence:**
@@ -140,10 +181,12 @@ erDiagram
 
     Users {
         int id PK
+        string google_id
         string email
-        string password_hash
         int division_id FK
         int church_id FK
+        string approval_status
+        int approver_id FK
     }
 
     Churches {
@@ -218,17 +261,16 @@ erDiagram
 State Machine Diagram
 **Question:** How does state change over time?
 
-**User Role Application State Machine:**
+**User Account Approval State Machine:**
 
 ```mermaid
 stateDiagram-v2
-    [*] --> Pending
-    Pending --> Under_Review: Admin Reviews
-    Under_Review --> Approved: Approve
-    Under_Review --> Rejected: Reject
-    Approved --> Active_Role: Role Assigned
+    [*] --> Pending_Approval
+    Pending_Approval --> Approved: Approver Approves
+    Pending_Approval --> Rejected: Approver Rejects
+    Approved --> Active: Login Successful
     Rejected --> [*]
-    Active_Role --> [*]
+    Active --> [*]
 ```
 
 **Event Lifecycle State Machine:**
