@@ -24,6 +24,7 @@
     - Version 1.1.1: User Authentication Setup
         - [x] Create a dedicated IAM account for the project
         - [x] Set up AWS Cognito User Pool for email/password authentication.
+        - [x] Install required libraries and create the backend folder
         - [ ] Develop backend API endpoints for user registration, login, and token refresh.
         - [ ] Create frontend components for user registration and login forms.
         - [ ] Implement JWT handling (storage, sending, refreshing) for authenticated requests.

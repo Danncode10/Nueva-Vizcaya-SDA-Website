@@ -17,4 +17,15 @@
 8. AWS Cognito, we didnt use (Google OAuth via ) since you need GCP here, we want to stick in AWS
    - Create user pool > Copy paste the form in AWS and ask AI the appropriate to answer 
    - Add a return url: http://localhost:3000 for prototype and change this later for production
-9.  
+9.  Backend Setup
+    ```
+    mkdir backend && cd backend && python -m venv venv && source venv/bin/activate && pip install fastapi uvicorn sqlalchemy psycopg2-binary boto3 "python-jose[cryptography]" "pydantic[email]
+    ```
+
+    requirements.txt (Inside backend/backend, run this)
+    ```
+    pip freeze > requirements.txt
+    ```
+    - Set Up Database Models (models.py)
+
+10. 
