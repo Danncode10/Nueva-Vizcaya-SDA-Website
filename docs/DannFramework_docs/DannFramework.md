@@ -21,7 +21,7 @@
 
 **Suggested Answer Guide**
 
-> “Users struggle with ___ because ___. This causes ___ and results in ___.”
+> "Users struggle with ___ because ___. This causes ___ and results in ___."
 
 ---
 
