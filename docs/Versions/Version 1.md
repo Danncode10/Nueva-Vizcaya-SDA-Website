@@ -23,7 +23,7 @@
 - **Tasks:**
     - Version 1.1.1: User Authentication Setup
         - [x] Create a dedicated IAM account for the project
-        - [ ] Implement Google OAuth integration via AWS Cognito.
+        - [x] Set up AWS Cognito User Pool for email/password authentication.
         - [ ] Develop backend API endpoints for user registration, login, and token refresh.
         - [ ] Create frontend components for user registration and login forms.
         - [ ] Implement JWT handling (storage, sending, refreshing) for authenticated requests.
@@ -32,12 +32,12 @@
         - [ ] Develop backend API endpoints for user profile CRUD (Create, Read, Update, Delete) operations.
         - [ ] Create frontend components for viewing and editing user profiles.
         - [ ] Implement API endpoints for requesting role changes and church membership updates.
-        - [ ] Develop basic admin dashboard UI/UX for approving/rejecting new user registrations and role change requests.
+        - [ ] Develop basic admin dashboard UI/UX for approving/rejg new user registrations and role change requests.
         - [ ] Refine database schema for users, roles, and user_roles tables to support multiple roles and approval statuses.
 
 ### Version 1.2.0: Church Directory & Division Management
 - **Description:** Implement structured management of church divisions and a comprehensive, searchable church directory, including administrative tools for data population. (Associated Changelog: `docs/Versions/changelog/V_1_2.md`)
-- **Tasks:**
+- **Tasks:
     - Version 1.2.1: Division Structure Implementation
         - [ ] Develop backend API endpoints for division CRUD operations (admin-only).
         - [ ] Create/update database schema for `divisions` table (id, name, designated_pastor_id FK).
@@ -51,7 +51,7 @@
 
 ### Version 1.3.0: Dynamic Content & Events Management
 - **Description:** Develop modules for managing and displaying church events, blogs, and announcements, including tagging and content verification workflows. (Associated Changelog: `docs/Versions/changelog/V_1_3.md`)
-- **Tasks:**
+- **Tasks:
     - Version 1.3.1: Events Calendar Functionality
         - [ ] Develop backend API endpoints for event CRUD operations (admin-only, with scope settings).
         - [ ] Create/update database schema for `events` (id, title, description, date, location, created_by FK, church_id FK, division_id FK, scope).
@@ -65,7 +65,7 @@
 
 ### Version 1.4.0: Lesson Studies & File Management
 - **Description:** Provide access to SDA quarterly lesson materials and implement a secure file upload/download system for resources. (Associated Changelog: `docs/Versions/changelog/V_1_4.md`)
-- **Tasks:**
+- **Tasks:
     - Version 1.4.1: Lesson Studies Hub
         - [ ] Integrate backend with a source for SDA quarterly lesson materials (e.g., external API or static content storage).
         - [ ] Develop frontend components for browsing and displaying lesson study content.
@@ -79,7 +79,7 @@
 
 ### Version 1.5.0: UI/UX Refinement & Admin Dashboard Expansion
 - **Description:** Finalize the user interface and user experience, ensuring responsiveness and polish, and expand the administrative dashboard with core functionalities. (Associated Changelog: `docs/Versions/changelog/V_1_5.md`)
-- **Tasks:**
+- **Tasks:
     - Version 1.5.1: Overall UI/UX Polish
         - [ ] Conduct comprehensive review of all frontend components for responsiveness (mobile-first).
         - [ ] Implement consistent styling and design across the entire application (Tailwind CSS, if applicable).

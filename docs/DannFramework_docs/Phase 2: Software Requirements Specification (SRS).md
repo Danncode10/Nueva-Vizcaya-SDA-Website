@@ -6,10 +6,10 @@
 
 * **Anonymous Content Access:** The system shall allow anonymous users to view public content including church directory, blogs, announcements, events, and lesson studies without registration. Triggered by visiting website. Output: Public content displayed.
 * **Optional Authentication:** The system shall prompt users to log in when accessing restricted features like file uploads, profile management, or content creation. Triggered by clicking restricted actions. Output: Login modal or redirect to login page.
-* **User Registration with Approval:** The system shall allow users to register using Google account and select an approving pastor/admin during signup. Triggered by user clicking "Register" button. Output: Registration request sent to selected approver.
+* **User Registration with Approval:** The system shall allow users to register using email and password and select an approving pastor/admin during signup. Triggered by user clicking "Register" button. Output: Registration request sent to selected approver.
 * **Approver Search:** The system shall provide search functionality for users to find pastors and admins by name during registration. For pastor role applications, only admins shall be searchable as approvers. Triggered by user typing in search field. Output: Filtered list of eligible approvers based on intended role.
 * **Account Approval Workflow:** The system shall allow selected pastors/admins to approve or reject registration requests. Triggered by approver reviewing pending requests. Output: User account activated or rejected with notification.
-* **User Login:** The system shall allow approved users to log in using Google account. Triggered by approved user clicking "Login" button or prompted by restricted actions. Output: User authenticated, access granted to requested feature.
+* **User Login:** The system shall allow approved users to log in using email and password. Triggered by approved user clicking "Login" button or prompted by restricted actions. Output: User authenticated, access granted to requested feature.
 * **User Profile Management:** The system shall allow users to view and edit their profiles, including personal information, roles, and church membership. Triggered by user accessing profile page. Output: Profile updated, changes reflected across system.
 * **Role Management:** The system shall allow approved members to request role changes (youth, health, treasurer) and church membership changes. Triggered by user submitting role/membership change request. Output: Request submitted for approval, notifications sent.
 * **Multiple Roles Support:** The system shall support multiple roles per user account. Triggered by role assignments/approvals. Output: User permissions updated based on all assigned roles.
@@ -128,4 +128,4 @@
 
 **Suggested Answer Guide**
 
-> "Required variables include DATABASE_URL, FRONTEND_URL, PORT. Sensitive variables are database passwords and AWS keys, stored in AWS Secrets Manager for production. Use .env.example for templates, and document setup in README."
+> "Required variables include DATABASE_URL, FRONTEND_URL, PORT. Sensitive variables are database passwords and AWS keys, stored in AWS Secrets Manager for production. Use .env.example for templates, and document setup in README.

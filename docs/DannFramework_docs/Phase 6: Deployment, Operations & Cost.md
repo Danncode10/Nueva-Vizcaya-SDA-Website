@@ -76,9 +76,9 @@
   - **Data Transfer:** $5-15/month (depending on usage)
   - **Total Estimated:** $42-82/month for basic setup (20-25% cost reduction vs RDS)
 
-**Authentication Service:** AWS Cognito configured with Google OAuth as the identity provider. Users authenticate through Google, Cognito manages user pools and provides JWT access tokens. No passwords are stored in our database - Google handles the secure authentication, and we store only the Google user ID for user identification.
+**Authentication Service:** AWS Cognito for user authentication. Users authenticate with email and password, and Cognito manages user pools and provides JWT access tokens. Passwords are not stored in our database, as Cognito handles secure authentication, and we store only the Cognito user ID for user identification.
 
-**Database Storage Note:** Using PostgreSQL on EC2 eliminates RDS costs. User authentication via Google OAuth means no passwords stored locally. Database contains user profiles, roles, and application data but no sensitive credentials. Database files are not committed to Git - only schema migrations and seed data.
+**Database Storage Note:** Using PostgreSQL on EC2 eliminates RDS costs. User authentication via AWS Cognito (email and password) means no passwords stored locally. Database contains user profiles, roles, and application data but no sensitive credentials. Database files are not committed to Git - only schema migrations and seed data.
 
 * **Cost per User:** $0.06-0.11 per active user per month (based on 1000 users), decreasing as user base grows due to AWS economies of scale.
 

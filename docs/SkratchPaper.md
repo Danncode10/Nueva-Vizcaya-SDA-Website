@@ -14,4 +14,7 @@
    - Check marked to generate custom password
    - Permission to: AWS-FullStack-Deployment (Ive built this months ago suitable for this project)
    - 
-8. 
+8. AWS Cognito, we didnt use (Google OAuth via ) since you need GCP here, we want to stick in AWS
+   - Create user pool > Copy paste the form in AWS and ask AI the appropriate to answer 
+   - Add a return url: http://localhost:3000 for prototype and change this later for production
+9.  
