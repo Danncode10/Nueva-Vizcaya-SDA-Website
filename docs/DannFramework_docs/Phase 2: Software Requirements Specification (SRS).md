@@ -16,8 +16,9 @@
 * **Role Management:** The system shall allow members to request role changes (youth, health, treasurer) and church membership changes. Triggered by user submitting role/membership change request. Output: Request submitted for approval, notifications sent.
 * **Pastor Role Verification:** The system shall require admin verification for pastor role applications. Triggered by user applying for pastor role. Output: Application submitted to admins, approval/denial notification sent.
 * **Multiple Roles Support:** The system shall support multiple roles per user account. Triggered by role assignments/approvals. Output: User permissions updated based on all assigned roles.
-* **Church Directory:** The system shall display a directory of all SDA churches in Nueva Vizcaya. Triggered by user navigating to directory page. Output: List of churches with contact information.
-* **Events Management:** The system shall allow admins to create, read, update, and delete events. Triggered by admin actions on events page. Output: Events displayed on calendar, notifications sent.
+* **Division Management:** The system shall support province divisions (Northern, Upper, South Eastern, etc.) with designated pastors. Triggered by admin division setup. Output: Division structure with assigned pastors.
+* **Church Directory:** The system shall display a directory of all SDA churches in Nueva Vizcaya organized by divisions. Triggered by user navigating to directory page. Output: Hierarchical list of divisions and churches with contact information.
+* **Events Management:** The system shall allow admins to create, read, update, and delete events with scope settings (division-specific or province-wide). Triggered by admin actions on events page. Output: Events displayed on calendar with appropriate visibility, notifications sent to relevant users.
 * **Home Page Content:** The system shall display featured/random posts and upcoming events on the home page. Triggered by page load. Output: Dynamic content showcasing recent activity and events.
 * **Blogs and Announcements:** The system shall allow admins to post blogs and announcements with SDA Fundamental Beliefs tagging, including date posted, author, verification status, and tags. Triggered by admin submitting content. Output: Content published with metadata, visible to users.
 * **Lesson Studies:** The system shall provide access to SDA quarterly lesson materials. Triggered by user selecting lesson. Output: Lesson content displayed, study guides available.
@@ -98,9 +99,10 @@
 * **Role Management:** Successful when members can request role changes and admins approve/reject them appropriately.
 * **Pastor Role Verification:** Successful when pastor applications require admin approval and notifications are sent.
 * **Multiple Roles Support:** Successful when users with multiple roles have appropriate permissions across all roles.
+* **Division Management:** Successful when divisions are properly structured with designated pastors and churches are organized hierarchically.
 * **Home Page Content:** Successful when featured posts and upcoming events are displayed dynamically on page load.
 * **Blogs and Announcements:** Successful when posts display date, author, verification status, and tags correctly.
-* **Church Directory:** Successful when all Nueva Vizcaya SDA churches are listed accurately.
+* **Church Directory:** Successful when all Nueva Vizcaya SDA churches are listed accurately organized by divisions.
 * **Events Management:** Successful when events appear on calendar and users receive notifications.
 * **File Upload:** Successful when uploaded files are accessible and downloadable by authorized users.
 
