@@ -10,7 +10,7 @@
    - Use gemini flash openrouter, pasted prompt to look for improvement and contradiction on my documentation
 5. Created new Branch named v1
 6. Use the prompt from DannFramework to generate todo task. Note use Openrouter: Gemini Flash for planning Version
-7. Create .env.example file for environment variables
+7. Create .env.example and .gitignore
 8. Created IAM Account dedicated to the project
    - Check marked to generate custom password
    - Permission to: AWS-FullStack-Deployment (Ive built this months ago suitable for this project)
@@ -23,10 +23,11 @@
     mkdir backend && cd backend && python -m venv venv && source venv/bin/activate && pip install fastapi uvicorn sqlalchemy psycopg2-binary boto3 "python-jose[cryptography]" "pydantic[email]
     ```
 
-    requirements.txt (Inside backend/backend, run this)
+    requirements.txt (Inside backend/backend, run this) Run this every time new library is added
     ```
-    pip freeze > requirements.txt
+    pip freeze > requirements.txt 
     ```
-    - Set Up Database Models (models.py)
 
-11. 
+11.  Set Up Database Models, FastAPI etc (models.py, main.py, config.py, etc ) AI generated
+    - Ask AI how to verify if backend works, it might says error
+12.  

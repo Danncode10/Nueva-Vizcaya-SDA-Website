@@ -25,8 +25,8 @@
         - [x] Create a dedicated IAM account for the project
         - [x] Set up AWS Cognito User Pool for email/password authentication.
         - [x] Install required libraries and create the backend folder
-        - [ ] Create .env.example file for environment variables
-        - [ ] Develop backend API endpoints for user registration, login, and token refresh.
+        - [x] Create .env.example file for environment variables
+        - [x] Develop backend API endpoints for user registration, login, and token refresh.
         - [ ] Create frontend components for user registration and login forms.
         - [ ] Implement JWT handling (storage, sending, refreshing) for authenticated requests.
         - [ ] Define initial IAM roles for basic user permissions (e.g., Anonymous, Member).
