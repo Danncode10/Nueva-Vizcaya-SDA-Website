@@ -1,7 +1,7 @@
 from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
-    database_url: str = "postgresql://postgres:password@localhost/nv_sda_db"
+    database_url: str = "postgresql://lesterdannlopez@localhost/nv_sda_db"
     cognito_user_pool_id: str = ""
     cognito_client_id: str = ""
     aws_region: str = "ap-southeast-1"

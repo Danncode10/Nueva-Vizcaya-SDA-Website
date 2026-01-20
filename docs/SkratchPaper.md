@@ -29,5 +29,6 @@
     ```
 
 11.  Set Up Database Models, FastAPI etc (models.py, main.py, config.py, etc ) AI generated
-    - Ask AI how to verify if backend works, it might says error
-12.  
+    - Ask AI how to verify if backend works, it might says error becvause it cant find the database, see next step
+12.  Use DBeaver for macbook to make local database, and then test FASTapi (Instruction at V_1_1_1_5.md)
+13.  
