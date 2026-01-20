@@ -2,14 +2,6 @@
 
 ## 1.1 Problem Statement
 
-**Questions**
-
-* What problem am I solving?
-* Who experiences this problem?
-* How often does the problem occur?
-* Why is this problem worth solving?
-* What happens if this problem remains unsolved?
-
 **Answers**
 
 * **What problem am I solving?** Lack of a centralized digital platform for managing SDA church information, events, resources, and community engagement in Nueva Vizcaya.
@@ -26,13 +18,6 @@
 
 ## 1.2 Target Users
 
-**Questions**
-
-* Who are the primary users?
-* Are there secondary users or admins?
-* What is their technical skill level (This refers to how comfortable users are with technology and digital platforms.) ?
-* What devices do they commonly use?
-
 **Answers**
 
 * **Who are the primary users?** SDA church members in Nueva Vizcaya province, including regular members, youth, and community participants.
@@ -48,12 +33,6 @@
 
 ## 1.3 Project Goals (Version 1 Focus)
 
-**Questions**
-
-* What is the single most important outcome?
-* What must the system do *perfectly*?
-* What can be ignored for now?
-
 **Answers**
 
 * **What is the single most important outcome?** Successful deployment of a functional platform that SDA churches in Nueva Vizcaya can use for daily operations.
@@ -67,13 +46,6 @@
 ---
 
 ## 1.4 Competition & Market Scan
-
-**Questions**
-
-* What existing solutions exist?
-* What features do they offer?
-* What do users complain about?
-* What feature is missing or poorly done?
 
 **Answers**
 
@@ -89,12 +61,6 @@
 ---
 
 ## 1.5 Feature Definition & Scope Control
-
-**Questions**
-
-* What are MUST-HAVE features?
-* What are NICE-TO-HAVE features?
-* What features are explicitly excluded?
 
 **Answers**
 
@@ -112,13 +78,6 @@
 
 ## 1.6 Platform & Project Type
 
-**Questions**
-
-* Is this a website by default?
-* Will it expand to mobile, AI, or robotics?
-* Does it require real-time processing?
-* Does it integrate with hardware?
-
 **Answers**
 
 * **Is this a website by default?** Yes, Version 1 is a responsive web application with mobile-first design.
@@ -133,13 +92,6 @@
 ---
 
 ## 1.7 User Requirements
-
-**Questions**
-
-* What actions can users perform?
-* What actions are restricted?
-* What errors must be user-friendly?
-* Accessibility needs?
 
 **Answers**
 
@@ -156,19 +108,12 @@
 
 ## 1.8 System Requirements
 
-**Questions**
-
-* Expected number of users?
-* Response time expectations?
-* Availability requirements?
-* Storage needs?
-
 **Answers**
 
 * **Expected number of users?** 1000 users initially, scalable to more in future versions.
 * **Response time expectations?** Less than 500ms for most operations to ensure smooth user experience.
 * **Availability requirements?** High availability (99.9%) to support church operations and community engagement.
-* **Storage needs?** PostgreSQL database on basic EC2 instance for structured data (prototype), AWS S3 for file uploads and media storage.
+* **Storage needs?** PostgreSQL database on basic EC2 instance for structured data (prototype), AWS S3 for file uploads and media storage. This approach eliminates RDS costs by self-hosting PostgreSQL on EC2 as a cost-optimization strategy.
 
 **Suggested Answer Guide**
 
@@ -177,13 +122,6 @@
 ---
 
 ## 1.9 Software Evolution Roadmap
-
-**Questions**
-
-* What is Version 1?
-* What improves in Version 2?
-* When does AI appear?
-* When does mobile appear?
 
 **Answers**
 
@@ -200,12 +138,6 @@
 * V4: Mobile app
 
 ## 1.10 Monetization Strategy
-
-**Questions**
-
-* Does this web/app have premium features?
-* Is it free?
-* Does it run ads?
 
 **Answers**
 

@@ -2,12 +2,6 @@
 
 ## 5.1 SDLC Selection
 
-**Questions**
-
-* Is the scope stable?
-* Is feedback frequent?
-* Is risk high?
-
 **Answers**
 
 * **Is the scope stable?** Yes, Version 1 scope is well-defined with clear target outputs including authentication, church directory, events, blogs, lesson studies, file uploads, and admin dashboard. Features are prioritized and scoped for initial release.
@@ -27,12 +21,6 @@
 
 ## 5.2 Development Methodology
 
-**Questions**
-
-* What development approach?
-* How to handle changes?
-* Quality assurance process?
-
 **Answers**
 
 * **Development Approach:** Solo developer following agile principles with structured planning. Daily development sessions with regular code reviews and testing.
@@ -42,12 +30,6 @@
 ---
 
 ## 5.3 Project Timeline
-
-**Questions**
-
-* Development phases?
-* Milestones?
-* Delivery schedule?
 
 **Answers**
 
@@ -73,12 +55,6 @@
 
 ## 5.4 Risk Management
 
-**Questions**
-
-* What are the risks?
-* Mitigation strategies?
-* Contingency plans?
-
 **Answers**
 
 * **Technical Risks:**
@@ -102,12 +78,6 @@
 
 ## 5.5 Resource Planning
 
-**Questions**
-
-* Team composition?
-* Tools and technologies?
-* Budget allocation?
-
 **Answers**
 
 * **Team Composition:** Solo developer (Lester Dann Lopez) with potential external consultants for specialized tasks.
@@ -124,12 +94,6 @@
 ---
 
 ## 5.6 Quality Assurance
-
-**Questions**
-
-* Testing strategy?
-* Code quality standards?
-* Performance benchmarks?
 
 **Answers**
 
@@ -156,12 +120,6 @@
 
 ## 5.7 Communication Plan
 
-**Questions**
-
-* Stakeholder communication?
-* Progress reporting?
-* Feedback collection?
-
 **Answers**
 
 * **Stakeholder Communication:** Weekly progress updates to church leaders. Monthly detailed reports on development status.
@@ -171,12 +129,6 @@
 ---
 
 ## 5.8 Success Metrics
-
-**Questions**
-
-* How to measure success?
-* Key performance indicators?
-* Success criteria?
 
 **Answers**
 

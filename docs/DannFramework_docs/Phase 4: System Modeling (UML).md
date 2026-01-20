@@ -3,7 +3,6 @@
 ## 4.1 Context Model
 
 System Context Diagram (Input, Process, Output arrows and System at the center)
-**Question:** Who interacts with what?
 
 **System Context Diagram:**
 
@@ -38,7 +37,6 @@ graph TD
 ## 4.2 Interaction Model
 
 Sequence Diagram
-**Question:** What happens step-by-step?
 
 **User Registration & Approval Sequence:**
 
@@ -148,7 +146,6 @@ sequenceDiagram
 ## 4.3 Structural Model
 
 Class Diagram / ER Diagram
-**Question:** How is data structured?
 
 **Entity-Relationship Diagram:**
 
@@ -259,7 +256,6 @@ erDiagram
 ## 4.4 Behavioral Model
 
 State Machine Diagram
-**Question:** How does state change over time?
 
 **User Account Approval State Machine:**
 

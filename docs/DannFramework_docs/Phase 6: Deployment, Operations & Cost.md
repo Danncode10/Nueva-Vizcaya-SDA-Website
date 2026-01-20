@@ -2,12 +2,6 @@
 
 ## 6.1 Deployment Strategy
 
-**Questions**
-
-* Manual or automated?
-* Environments?
-* Rollback strategy?
-
 **Answers**
 
 * **Manual or Automated?** Hybrid approach - manual deployment for initial releases, automated CI/CD pipeline for future updates. GitHub Actions for automated testing and deployment to staging environment.
@@ -20,12 +14,6 @@
 ---
 
 ## 6.2 CI/CD Pipeline
-
-**Questions**
-
-* When do builds trigger?
-* Automated tests?
-* Deployment automation?
 
 **Answers**
 
@@ -48,12 +36,6 @@
 ---
 
 ## 6.3 Monitoring & Logging
-
-**Questions**
-
-* What metrics matter?
-* Error tracking?
-* Alerting rules?
 
 **Answers**
 
@@ -83,12 +65,6 @@
 ---
 
 ## 6.4 Cost Estimation (AWS)
-
-**Questions**
-
-* Monthly cost?
-* Cost per user?
-* Budget alerts?
 
 **Answers**
 
@@ -121,12 +97,6 @@
 
 ## 6.5 Infrastructure Architecture
 
-**Questions**
-
-* Cloud provider?
-* Scalability approach?
-* Security measures?
-
 **Answers**
 
 * **Cloud Provider:** AWS (Amazon Web Services) as primary cloud provider, following the AWS-first strategy.
@@ -136,12 +106,6 @@
 ---
 
 ## 6.6 Backup & Disaster Recovery
-
-**Questions**
-
-* Backup frequency?
-* Recovery procedures?
-* Data retention?
 
 **Answers**
 
@@ -153,12 +117,6 @@
 
 ## 6.7 Performance Optimization
 
-**Questions**
-
-* Caching strategy?
-* Database optimization?
-* CDN usage?
-
 **Answers**
 
 * **Caching Strategy:** Redis for session storage and API response caching, browser caching for static assets, CloudFront for global content delivery.
@@ -168,12 +126,6 @@
 ---
 
 ## 6.8 Maintenance Schedule
-
-**Questions**
-
-* Update frequency?
-* Downtime windows?
-* Emergency procedures?
 
 **Answers**
 
@@ -185,12 +137,6 @@
 
 ## 6.9 Compliance & Security
 
-**Questions**
-
-* Data protection?
-* Privacy compliance?
-* Audit requirements?
-
 **Answers**
 
 * **Data Protection:** Encryption at rest and in transit, secure API authentication, regular security audits, and vulnerability assessments.
@@ -200,12 +146,6 @@
 ---
 
 ## 6.10 Support & Documentation
-
-**Questions**
-
-* User support?
-* Technical documentation?
-* Training materials?
 
 **Answers**
 

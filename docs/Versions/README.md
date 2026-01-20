@@ -6,7 +6,7 @@ This document outlines the target features and output for each major version of 
 **Status:** In Development
 
 **Target Output:**
-- Complete user authentication system with role-based access (Pastor, Elder, Treasurer, Member, Youth)
+- Complete user authentication system with extensible role-based access (Pastor, Elder, Treasurer, Member, Youth, with admin capability to add new roles like Music, Communication)
 - User profile management with multiple role supp ort
 - Church directory for all Nueva Vizcaya SDA churches
 - Events calendar with full CRUD operations

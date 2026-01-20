@@ -2,11 +2,6 @@
 
 ## 7.1 Technical Debt Plan
 
-**Questions**
-
-* What shortcuts exist?
-* When will they be fixed?
-
 **Answers**
 
 * **Current Technical Debt:**
@@ -25,13 +20,6 @@
 ---
 
 ## 7.2 Documentation Strategy
-
-**Questions**
-
-* README completeness?
-* API docs?
-* Architecture docs?
-* Setup instructions?
 
 **Answers**
 
@@ -68,13 +56,6 @@
 
 ## 7.3 Exit or Handover Plan
 
-**Questions**
-
-* Can another dev run this?
-* Are credentials transferable?
-* Is infra reproducible?
-* Can project be paused or sold?
-
 **Answers**
 
 * **Developer Handover Capability:**
@@ -108,13 +89,6 @@
 
 ## 7.4 Knowledge Management
 
-**Questions**
-
-* Code documentation?
-* Decision rationale?
-* Troubleshooting guides?
-* Training materials?
-
 **Answers**
 
 * **Code Documentation:**
@@ -144,13 +118,6 @@
 ---
 
 ## 7.5 Community & Support Plan
-
-**Questions**
-
-* User support structure?
-* Community building?
-* Feedback collection?
-* Long-term engagement?
 
 **Answers**
 
@@ -182,13 +149,6 @@
 
 ## 7.6 Legal & Compliance Maintenance
 
-**Questions**
-
-* Data retention policies?
-* Privacy compliance updates?
-* Legal documentation?
-* Regulatory monitoring?
-
 **Answers**
 
 * **Data Retention Policies:**
@@ -218,13 +178,6 @@
 ---
 
 ## 7.7 Financial Sustainability
-
-**Questions**
-
-* Funding sources?
-* Cost monitoring?
-* Revenue opportunities?
-* Financial handover?
 
 **Answers**
 

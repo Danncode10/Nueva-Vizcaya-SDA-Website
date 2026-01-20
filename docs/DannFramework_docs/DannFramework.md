@@ -108,6 +108,7 @@
 * What actions are restricted?
 * What errors must be user-friendly?
 * Accessibility needs?
+* Should user roles be extensible for future additions?
 
 ---
 

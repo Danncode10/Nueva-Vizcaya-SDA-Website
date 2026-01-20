@@ -5,5 +5,6 @@
 4. Fill up the Dann Framework
    - Concern about how user experience
    - What AWS Service to use and cost of prototype
-   -  
-5. 
+   - Compare Version/Readme.md and DannFramework_docs if there are contradictions.
+   - Use gemini flash openrouter, pasted prompt to look for improvement and contradiction on my documentation
+5. Use the prompt from DannFramework to generate todo task

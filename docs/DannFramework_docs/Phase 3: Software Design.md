@@ -2,12 +2,6 @@
 
 ## 3.1 High-Level Design (HLD)
 
-**Questions**
-
-* What architecture style?
-* What are major modules?
-* How does data flow?
-
 **Answers**
 
 * **Architecture Style:** Three-tier web application architecture with separation of concerns - presentation layer (React frontend), application layer (FastAPI backend), and data layer (PostgreSQL database + AWS S3 storage). Initially monolithic for simplicity, designed to scale to microservices.
@@ -30,14 +24,6 @@
 ---
 
 ## 3.2 Low-Level Design (LLD)
-
-**Questions**
-
-* Class structures?
-* Database schema?
-* API endpoints?
-* Core algorithms?
-* Pseudocode for logic?
 
 **Answers**
 
@@ -82,6 +68,10 @@
   - `GET /users/profile` - Get user profile (authenticated)
   - `PUT /users/profile` - Update user profile (authenticated)
   - `POST /users/roles/request` - Request role change (authenticated)
+  - `POST /admin/roles` - Create new role (admin only)
+  - `GET /admin/roles` - List all roles (admin only)
+  - `PUT /admin/roles/{id}` - Update role (admin only)
+  - `DELETE /admin/roles/{id}` - Delete role (admin only)
   - `POST /events` - Create event (admin only)
   - `POST /posts` - Create post (admin only)
   - `POST /files/upload` - Upload file (authenticated)
