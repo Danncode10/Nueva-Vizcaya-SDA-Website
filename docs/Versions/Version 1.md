@@ -22,6 +22,7 @@
 - **Description:** Establish the foundational user authentication and profile management system, including role-based access and the user registration workflow. (Associated Changelog: `docs/Versions/changelog/V_1_1.md`)
 - **Tasks:**
     - Version 1.1.1: User Authentication Setup
+        - [x] Create a dedicated IAM account for the project
         - [ ] Implement Google OAuth integration via AWS Cognito.
         - [ ] Develop backend API endpoints for user registration, login, and token refresh.
         - [ ] Create frontend components for user registration and login forms.
