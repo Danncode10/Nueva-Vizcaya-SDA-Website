@@ -10,14 +10,15 @@
    - Use gemini flash openrouter, pasted prompt to look for improvement and contradiction on my documentation
 5. Created new Branch named v1
 6. Use the prompt from DannFramework to generate todo task. Note use Openrouter: Gemini Flash for planning Version
-7. Created IAM Account dedicated to the project
+7. Create .env.example file for environment variables
+8. Created IAM Account dedicated to the project
    - Check marked to generate custom password
    - Permission to: AWS-FullStack-Deployment (Ive built this months ago suitable for this project)
    - 
-8. AWS Cognito, we didnt use (Google OAuth via ) since you need GCP here, we want to stick in AWS
+9. AWS Cognito, we didnt use (Google OAuth via ) since you need GCP here, we want to stick in AWS
    - Create user pool > Copy paste the form in AWS and ask AI the appropriate to answer 
    - Add a return url: http://localhost:3000 for prototype and change this later for production
-9.  Backend Setup
+10. Backend Setup
     ```
     mkdir backend && cd backend && python -m venv venv && source venv/bin/activate && pip install fastapi uvicorn sqlalchemy psycopg2-binary boto3 "python-jose[cryptography]" "pydantic[email]
     ```
@@ -28,4 +29,4 @@
     ```
     - Set Up Database Models (models.py)
 
-10. 
+11. 
