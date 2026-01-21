@@ -29,7 +29,8 @@
         - [x] Develop backend API endpoints for user registration, login, and token refresh.
         - [x] Setup database in DBeaver for Local in my macbook
         - [x] Test the FastAPI at http://localhost:8000/docs
-        - [ ] Create frontend components for user registration and login forms.
+        - [x] Clone my github ui starting app. git clone https://github.com/Danncode10/Web-Starter-React.git ui
+        - [x] Create frontend components for user registration and login forms.
         - [ ] Implement JWT handling (storage, sending, refreshing) for authenticated requests.
         - [ ] Define initial IAM roles for basic user permissions (e.g., Anonymous, Member).
     - Version 1.1.2: User Profile & Role Management

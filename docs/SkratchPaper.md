@@ -41,4 +41,4 @@
     - Test and paste error until successful
     - Flow of my Authenticatiom
          - register API -> Cognito for password to store and security -> login API
-16.  
+16.  If UI like login is asked, clone first my github starting app

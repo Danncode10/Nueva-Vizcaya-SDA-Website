@@ -1,0 +1,4 @@
+Node.js==18.x (LTS)
+npm==9.x
+Vite==5.0.12
+React==18.2.0

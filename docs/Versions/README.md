@@ -18,7 +18,7 @@ This document outlines the target features and output for each major version of 
 - Basic admin dashboard with role verification (Pastor roles require admin approval)
 - Member management with church membership changes
 
-**Tech Stack:** React (frontend), FastAPI (backend), PostgreSQL on EC2, AWS S3 for file storage
+**Tech Stack:** React (frontend), FastAPI (backend), PostgreSQL on EC2 (managed with DBeaver), AWS S3 for file storage
 
 **Completion Criteria:**
 - All core features functional and tested
