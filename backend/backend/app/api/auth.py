@@ -73,12 +73,20 @@ def login(request: LoginRequest):
                 'PASSWORD': request.password
             }
         )
-        return {
-            "access_token": response['AuthenticationResult']['AccessToken'],
-            "refresh_token": response['AuthenticationResult']['RefreshToken']
-        }
+        if 'AuthenticationResult' in response:
+            return {
+                "access_token": response['AuthenticationResult']['AccessToken'],
+                "refresh_token": response['AuthenticationResult']['RefreshToken']
+            }
+        else:
+            # Handle challenge (e.g., NEW_PASSWORD_REQUIRED)
+            return {
+                "challenge": response.get('ChallengeName'),
+                "challenge_parameters": response.get('ChallengeParameters'),
+                "session": response.get('Session')
+            }
     except Exception as e:
-        raise HTTPException(status_code=400, detail="Login failed")
+        raise HTTPException(status_code=400, detail=f"Login failed: {str(e)}")
 
 @router.post("/refresh")
 def refresh_token(request: RefreshRequest):

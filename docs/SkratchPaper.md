@@ -31,4 +31,14 @@
 11.  Set Up Database Models, FastAPI etc (models.py, main.py, config.py, etc ) AI generated
     - Ask AI how to verify if backend works, it might says error becvause it cant find the database, see next step
 12.  Use DBeaver for macbook to make local database, and then test FASTapi (Instruction at V_1_1_1_5.md)
-13.  
+13.  Created Test Data (seed.py) to test it the API in swagger UI then run the seed.py to actually create seed data
+      - What it does is populates your database with initial test data.
+14.  Update the .env to test login
+    - DATABASE_URL, COGNITO_USER_POOL_ID, COGNITO_CLIENT_ID
+15.  For AUTH and testing register and login API
+    - In edit App Client Information, check this (✅ Sign in with server-side administrative credentials: ALLOW_ADMIN_USER_PASSWORD_AUTH)
+    - Then for errors let AI do what it recommend
+    - Test and paste error until successful
+    - Flow of my Authenticatiom
+         - register API -> Cognito for password to store and security -> login API
+16.  
