@@ -25,8 +25,8 @@ function Register() {
     { id: 'member', name: 'Member', description: 'Regular church member', color: 'bg-blue-100 text-blue-800 border-blue-300' },
     { id: 'youth', name: 'Youth', description: 'Young church member', color: 'bg-green-100 text-green-800 border-green-300' },
     { id: 'elder', name: 'Elder', description: 'Church elder', color: 'bg-purple-100 text-purple-800 border-purple-300' },
-    { id: 'treasurer', name: 'Treasurer', description: 'Church treasurer', color: 'bg-orange-100 text-orange-800 border-orange-300' }
-    // Pastor requires admin approval, so not included here
+    { id: 'treasurer', name: 'Treasurer', description: 'Church treasurer', color: 'bg-orange-100 text-orange-800 border-orange-300' },
+    { id: 'pastor', name: 'Pastor', description: 'Church pastor', color: 'bg-red-100 text-red-800 border-red-300' }
   ]
 
   const handleRoleChange = (roleId: string, checked: boolean) => {
