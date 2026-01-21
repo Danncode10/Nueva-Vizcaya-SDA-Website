@@ -1,65 +1,50 @@
-# Git Commit Message Format
+# Git Commit Format
 
-This project adheres to the Conventional Commits specification for git commit messages. This ensures a standardized commit history, which can be used for automated changelog generation, semantic versioning, and clearer understanding of changes.
-
-## Format:
+## Commit Message Structure
 
 ```
-<type>(<scope>): <short summary>
+<type>: <subject>
 
-[optional body]
+<description>
 
-[optional footer(s)]
+<files>
+- <file_path>: <change_description>
+</files>
+
+<test_results>
+- <test_description>: <result>
+</test_results>
 ```
 
-### Prompt:
-```
-From the changes, generate a Git commit message following the format in docs/git_commit_format.md.
-Separate git add commands if needed for selective staging.
-Ensure the commit message is clean, concise, and follows the workflow guidelines.
-Dont run in terminal, just give me the message
-```
+## Types
 
-### Commit Message Structure:
+- **feat**: New feature
+- **fix**: Bug fix
+- **docs**: Documentation changes
+- **refactor**: Code refactoring
+- **test**: Adding tests
+- **chore**: Maintenance tasks
 
-*   **`<type>`:** Describes the kind of change that this commit is providing.
-    *   `feat`: A new feature
-    *   `fix`: A bug fix
-    *   `docs`: Documentation only changes
-    *   `style`: Changes that do not affect the meaning of the code (white-space, formatting, missing semicolons, etc.)
-    *   `refactor`: A code change that neither fixes a bug nor adds a feature
-    *   `perf`: A code change that improves performance
-    *   `test`: Adding missing tests or correcting existing tests
-    *   `build`: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
-    *   `ci`: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
-    *   `chore`: Other changes that don't modify src or test files
-    *   `revert`: Reverts a previous commit
-
-*   **`<scope>` (optional):** A noun describing the section of the codebase affected. For example: `parser`, `compiler`, `api`, `auth`, `ui`, `docs`.
-
-*   **`<short summary>`:** A very brief description of the change.
-    *   Use the imperative, present tense: "change" not "changed" nor "changes"
-    *   Don't capitalize the first letter
-    *   No period (`.`) at the end
-
-*   **`[optional body]`:** A longer explanation of the commit message.
-    *   Use the imperative, present tense.
-    *   Explain *what* and *why* the changes were made.
-
-*   **`[optional footer(s)]`:** Used for referencing issues or breaking changes.
-    *   `BREAKING CHANGE:`: Indicate backward-incompatible changes.
-    *   `Closes #<issue-number>`: Reference a GitHub issue that the commit closes.
-
-## Example:
+## Example
 
 ```
-feat(authentication): add user login functionality
+feat: Implement JWT handling for authentication
 
-This commit introduces the user login functionality, allowing users to authenticate
-using their email and password. It integrates with AWS Cognito for secure
-authentication.
+Added comprehensive JWT handling for both backend and frontend to enable secure authentication.
 
-Closes #123
-```
+<files>
+- backend/backend/app/core/config.py: Added cognito_jwks_url property for JWT validation
+- backend/backend/app/core/security.py: Created JWT validation logic and FastAPI Depends
+- backend/backend/app/main.py: Imported security dependency and added protected endpoint
+- ui/src/services/auth.ts: Created auth service with token storage and refresh
+- ui/src/main.tsx: Initialized Axios interceptors for automatic JWT handling
+- ui/src/pages/Login.tsx: Updated to use authService.login() for better token management
+</files>
 
-This documentation ensures that all contributors maintain a consistent and readable commit history.
+<test_results>
+- Token storage in localStorage: ✅ Working
+- Authenticated requests with access_token: ✅ Working
+- Automatic token refresh on 401: ✅ Working
+- Protected backend endpoint /users/me: ✅ Working
+- Logout and redirect on refresh failure: ✅ Working
+</test_results>

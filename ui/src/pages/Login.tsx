@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import axios from 'axios'
+import { authService } from '../services/auth'
 
 function Login() {
   const [email, setEmail] = useState('')
@@ -15,16 +15,7 @@ function Login() {
     setError('')
 
     try {
-      const response = await axios.post('auth/login', {
-        email,
-        password
-      })
-
-      // Assume response contains access_token
-      const { access_token } = response.data
-
-      // Store token in localStorage
-      localStorage.setItem('access_token', access_token)
+      await authService.login(email, password)
 
       // Redirect to home or dashboard
       navigate('/')

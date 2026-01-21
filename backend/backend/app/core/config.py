@@ -18,6 +18,10 @@ class Settings(BaseSettings):
     react_app_cognito_user_pool_id: str = ""
     react_app_cognito_client_id: str = ""
 
+    @property
+    def cognito_jwks_url(self) -> str:
+        return f"https://cognito-idp.{self.aws_region}.amazonaws.com/{self.cognito_user_pool_id}/.well-known/jwks.json"
+
     class Config:
         env_file = ".env"
 

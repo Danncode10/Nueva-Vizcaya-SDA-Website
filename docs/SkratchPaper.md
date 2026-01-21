@@ -42,3 +42,9 @@
     - Flow of my Authenticatiom
          - register API -> Cognito for password to store and security -> login API
 16.  If UI like login is asked, clone first my github starting app
+17. JWT handling (storage, sending, refreshing) for authenticated requests.
+    - Create security.py (CognitoJWTVerifier, get_current_user_from_jwt)
+    - Create Auth.ts
+    - Added cognito_jwks_url in config.py. (This URL tells our backend where to find the public keys that Cognito (our authentication service) uses to sign the special security tokens (JWTs))
+    - 
+18. 
