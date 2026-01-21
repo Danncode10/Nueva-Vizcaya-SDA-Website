@@ -31,6 +31,7 @@
         - [x] Test the FastAPI at http://localhost:8000/docs
         - [x] Clone my github ui starting app. git clone https://github.com/Danncode10/Web-Starter-React.git ui
         - [x] Create frontend components for user registration and login forms.
+        - [ ] New Task: Update a clean api_docs
         - [ ] Implement JWT handling (storage, sending, refreshing) for authenticated requests.
         - [ ] Define initial IAM roles for basic user permissions (e.g., Anonymous, Member).
     - Version 1.1.2: User Profile & Role Management
